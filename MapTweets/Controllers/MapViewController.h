@@ -15,7 +15,7 @@
 #import "TweetsOperation.h"
 
 
-@interface MapViewController : UIViewController<NSURLConnectionDelegate, MKMapViewDelegate, UIPickerViewDataSource,UIPickerViewDelegate,TweetsOperationDelegate>
+@interface MapViewController : UIViewController< MKMapViewDelegate, UIPickerViewDataSource,UIPickerViewDelegate,TweetsOperationDelegate>
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *btnChangeLifeSpan;
 

@@ -11,6 +11,10 @@
 		C9130F7E18CB2B470074C58D /* TweetsOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = C9130F7D18CB2B470074C58D /* TweetsOperation.m */; };
 		C9130F8118CB2B6C0074C58D /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9130F8018CB2B6C0074C58D /* MapViewController.m */; };
 		C9130F8318CB2E380074C58D /* timer.png in Resources */ = {isa = PBXBuildFile; fileRef = C9130F8218CB2E380074C58D /* timer.png */; };
+		C9130F8518CB36AC0074C58D /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9130F8418CB36AC0074C58D /* Social.framework */; };
+		C9130F8718CB36B20074C58D /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9130F8618CB36B20074C58D /* Accounts.framework */; };
+		C9130F8918CB36BA0074C58D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9130F8818CB36BA0074C58D /* CoreLocation.framework */; };
+		C9130F8B18CB36C90074C58D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9130F8A18CB36C90074C58D /* MapKit.framework */; };
 		C92C77B718C9E05C00B5378B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C92C77B618C9E05C00B5378B /* Foundation.framework */; };
 		C92C77B918C9E05C00B5378B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C92C77B818C9E05C00B5378B /* CoreGraphics.framework */; };
 		C92C77BB18C9E05C00B5378B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C92C77BA18C9E05C00B5378B /* UIKit.framework */; };
@@ -44,6 +48,10 @@
 		C9130F7F18CB2B6C0074C58D /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapViewController.h; path = Controllers/MapViewController.h; sourceTree = "<group>"; };
 		C9130F8018CB2B6C0074C58D /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MapViewController.m; path = Controllers/MapViewController.m; sourceTree = "<group>"; };
 		C9130F8218CB2E380074C58D /* timer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = timer.png; sourceTree = "<group>"; };
+		C9130F8418CB36AC0074C58D /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		C9130F8618CB36B20074C58D /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		C9130F8818CB36BA0074C58D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		C9130F8A18CB36C90074C58D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		C92C77B318C9E05C00B5378B /* MapTweets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapTweets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C92C77B618C9E05C00B5378B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C92C77B818C9E05C00B5378B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -68,6 +76,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9130F8B18CB36C90074C58D /* MapKit.framework in Frameworks */,
+				C9130F8918CB36BA0074C58D /* CoreLocation.framework in Frameworks */,
+				C9130F8718CB36B20074C58D /* Accounts.framework in Frameworks */,
+				C9130F8518CB36AC0074C58D /* Social.framework in Frameworks */,
 				C92C77B918C9E05C00B5378B /* CoreGraphics.framework in Frameworks */,
 				C92C77BB18C9E05C00B5378B /* UIKit.framework in Frameworks */,
 				C92C77B718C9E05C00B5378B /* Foundation.framework in Frameworks */,
@@ -144,6 +156,10 @@
 		C92C77B518C9E05C00B5378B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C9130F8A18CB36C90074C58D /* MapKit.framework */,
+				C9130F8818CB36BA0074C58D /* CoreLocation.framework */,
+				C9130F8618CB36B20074C58D /* Accounts.framework */,
+				C9130F8418CB36AC0074C58D /* Social.framework */,
 				C92C77B618C9E05C00B5378B /* Foundation.framework */,
 				C92C77B818C9E05C00B5378B /* CoreGraphics.framework */,
 				C92C77BA18C9E05C00B5378B /* UIKit.framework */,
