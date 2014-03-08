@@ -130,22 +130,13 @@ int numberTweet;
     NSArray *array = [response componentsSeparatedByString:@"\r\n"];
     
     [[ self delegate] plotMapView:self withDataArray:array];
+    //DO WE HAVE TO PERSIS DATA??
     
 }
 
 -(void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
-    
-    NSString *s = [[NSString alloc]initWithData:datos encoding:NSUTF8StringEncoding];
-    
-    UIImage *image = [UIImage imageWithData:datos];
-    
-
-    
-    
-    
-    
-    
+    NSLog(@"CONNECTION DID FINISH");
 }
 
 @end

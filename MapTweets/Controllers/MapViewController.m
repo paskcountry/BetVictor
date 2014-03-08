@@ -180,7 +180,11 @@ bool resetTweetLife;
 
 -(void)checkTimeToDie
 {
-      NSMutableArray *wipeItems = [[NSMutableArray alloc]init];
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"YYYY-MM-dd hh:mm:ss"];
+    
+    NSMutableArray *wipeItems = [[NSMutableArray alloc]init];
    
         int annotationsNumber = (int)[[mapView annotations]count];
 
@@ -192,9 +196,10 @@ bool resetTweetLife;
     for (InfoTweet *tweet in allTweets)
     {
           NSDate *now = [NSDate date];
-       
+        NSLog(@"before add interval creation date is %@",[formatter stringFromDate:tweet.annotationCreated]);
         NSDate *newDate = [tweet.annotationCreated dateByAddingTimeInterval:tweetLife]; // annotation creation date + lifespan
-        
+        NSLog(@"after add interval creation date is %@",[formatter stringFromDate:tweet.annotationCreated]);
+           NSLog(@"new  date is %@",[formatter stringFromDate:newDate]);
         NSComparisonResult result;
         //has three possible values: NSOrderedSame,NSOrderedDescending, NSOrderedAscending
         
@@ -203,6 +208,7 @@ bool resetTweetLife;
         if(result==NSOrderedAscending)
         {
             NSLog(@"expiration time has come ..Remove annotation");
+            NSLog(@"creation date is %@",[formatter stringFromDate:tweet.annotationCreated]);
             tweet.timeToDie=YES;
             [wipeItems addObject:tweet];
             
@@ -216,6 +222,7 @@ bool resetTweetLife;
         else
         {
             NSLog(@"your time has just come");
+            NSLog(@"creation date is %@",[formatter stringFromDate:tweet.annotationCreated]);
              tweet.timeToDie=YES;
             [wipeItems addObject:tweet];
            
@@ -227,8 +234,7 @@ bool resetTweetLife;
     [allTweets removeObjectsInArray:wipeItems];
     
     [mapView removeAnnotations:wipeItems];
-   // [mapView reloadInputViews];
-    
+ 
     annotationsNumber = (int)[[mapView annotations]count];
     
     NSLog(@"annotations number right now is : %d",annotationsNumber);
