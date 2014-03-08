@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C9130F7A18CB2B210074C58D /* InfoTweet.m in Sources */ = {isa = PBXBuildFile; fileRef = C9130F7918CB2B210074C58D /* InfoTweet.m */; };
+		C9130F7E18CB2B470074C58D /* TweetsOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = C9130F7D18CB2B470074C58D /* TweetsOperation.m */; };
+		C9130F8118CB2B6C0074C58D /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9130F8018CB2B6C0074C58D /* MapViewController.m */; };
+		C9130F8318CB2E380074C58D /* timer.png in Resources */ = {isa = PBXBuildFile; fileRef = C9130F8218CB2E380074C58D /* timer.png */; };
 		C92C77B718C9E05C00B5378B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C92C77B618C9E05C00B5378B /* Foundation.framework */; };
 		C92C77B918C9E05C00B5378B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C92C77B818C9E05C00B5378B /* CoreGraphics.framework */; };
 		C92C77BB18C9E05C00B5378B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C92C77BA18C9E05C00B5378B /* UIKit.framework */; };
@@ -14,7 +18,6 @@
 		C92C77C318C9E05D00B5378B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C92C77C218C9E05D00B5378B /* main.m */; };
 		C92C77C718C9E05D00B5378B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C92C77C618C9E05D00B5378B /* AppDelegate.m */; };
 		C92C77CA18C9E05D00B5378B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C92C77C818C9E05D00B5378B /* Main.storyboard */; };
-		C92C77CD18C9E05D00B5378B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C92C77CC18C9E05D00B5378B /* ViewController.m */; };
 		C92C77CF18C9E05D00B5378B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C92C77CE18C9E05D00B5378B /* Images.xcassets */; };
 		C92C77D618C9E05D00B5378B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C92C77D518C9E05D00B5378B /* XCTest.framework */; };
 		C92C77D718C9E05D00B5378B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C92C77B618C9E05C00B5378B /* Foundation.framework */; };
@@ -34,6 +37,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C9130F7918CB2B210074C58D /* InfoTweet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InfoTweet.m; path = Model/DTO/InfoTweet.m; sourceTree = "<group>"; };
+		C9130F7B18CB2B2E0074C58D /* InfoTweet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InfoTweet.h; path = Model/DTO/InfoTweet.h; sourceTree = "<group>"; };
+		C9130F7C18CB2B470074C58D /* TweetsOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TweetsOperation.h; path = Helpers/TweetsOperation.h; sourceTree = "<group>"; };
+		C9130F7D18CB2B470074C58D /* TweetsOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TweetsOperation.m; path = Helpers/TweetsOperation.m; sourceTree = "<group>"; };
+		C9130F7F18CB2B6C0074C58D /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapViewController.h; path = Controllers/MapViewController.h; sourceTree = "<group>"; };
+		C9130F8018CB2B6C0074C58D /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MapViewController.m; path = Controllers/MapViewController.m; sourceTree = "<group>"; };
+		C9130F8218CB2E380074C58D /* timer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = timer.png; sourceTree = "<group>"; };
 		C92C77B318C9E05C00B5378B /* MapTweets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapTweets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C92C77B618C9E05C00B5378B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C92C77B818C9E05C00B5378B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -45,8 +55,6 @@
 		C92C77C518C9E05D00B5378B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C92C77C618C9E05D00B5378B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		C92C77C918C9E05D00B5378B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		C92C77CB18C9E05D00B5378B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		C92C77CC18C9E05D00B5378B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		C92C77CE18C9E05D00B5378B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C92C77D418C9E05D00B5378B /* MapTweetsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MapTweetsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C92C77D518C9E05D00B5378B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -79,6 +87,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C9130F7518CB2AE90074C58D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C9130F7F18CB2B6C0074C58D /* MapViewController.h */,
+				C9130F8018CB2B6C0074C58D /* MapViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		C9130F7618CB2AF10074C58D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C9130F7C18CB2B470074C58D /* TweetsOperation.h */,
+				C9130F7D18CB2B470074C58D /* TweetsOperation.m */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		C9130F7718CB2B020074C58D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C9130F7818CB2B0B0074C58D /* DTO */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		C9130F7818CB2B0B0074C58D /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				C9130F7B18CB2B2E0074C58D /* InfoTweet.h */,
+				C9130F7918CB2B210074C58D /* InfoTweet.m */,
+			);
+			name = DTO;
+			sourceTree = "<group>";
+		};
 		C92C77AA18C9E05C00B5378B = {
 			isa = PBXGroup;
 			children = (
@@ -112,11 +155,12 @@
 		C92C77BC18C9E05C00B5378B /* MapTweets */ = {
 			isa = PBXGroup;
 			children = (
+				C9130F7718CB2B020074C58D /* Model */,
+				C9130F7618CB2AF10074C58D /* Helpers */,
+				C9130F7518CB2AE90074C58D /* Controllers */,
 				C92C77C518C9E05D00B5378B /* AppDelegate.h */,
 				C92C77C618C9E05D00B5378B /* AppDelegate.m */,
 				C92C77C818C9E05D00B5378B /* Main.storyboard */,
-				C92C77CB18C9E05D00B5378B /* ViewController.h */,
-				C92C77CC18C9E05D00B5378B /* ViewController.m */,
 				C92C77CE18C9E05D00B5378B /* Images.xcassets */,
 				C92C77BD18C9E05C00B5378B /* Supporting Files */,
 			);
@@ -126,6 +170,7 @@
 		C92C77BD18C9E05C00B5378B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C9130F8218CB2E380074C58D /* timer.png */,
 				C92C77BE18C9E05D00B5378B /* MapTweets-Info.plist */,
 				C92C77BF18C9E05D00B5378B /* InfoPlist.strings */,
 				C92C77C218C9E05D00B5378B /* main.m */,
@@ -229,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C92C77CF18C9E05D00B5378B /* Images.xcassets in Resources */,
+				C9130F8318CB2E380074C58D /* timer.png in Resources */,
 				C92C77C118C9E05D00B5378B /* InfoPlist.strings in Resources */,
 				C92C77CA18C9E05D00B5378B /* Main.storyboard in Resources */,
 			);
@@ -249,9 +295,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C92C77CD18C9E05D00B5378B /* ViewController.m in Sources */,
 				C92C77C718C9E05D00B5378B /* AppDelegate.m in Sources */,
+				C9130F7E18CB2B470074C58D /* TweetsOperation.m in Sources */,
+				C9130F8118CB2B6C0074C58D /* MapViewController.m in Sources */,
 				C92C77C318C9E05D00B5378B /* main.m in Sources */,
+				C9130F7A18CB2B210074C58D /* InfoTweet.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,6 +510,7 @@
 				C92C77E718C9E05D00B5378B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C92C77E818C9E05D00B5378B /* Build configuration list for PBXNativeTarget "MapTweetsTests" */ = {
 			isa = XCConfigurationList;
@@ -470,6 +519,7 @@
 				C92C77EA18C9E05D00B5378B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
