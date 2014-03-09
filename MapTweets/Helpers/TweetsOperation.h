@@ -13,7 +13,7 @@
 
 @protocol TweetsOperationDelegate;
 
-@interface TweetsOperation : NSOperation
+@interface TweetsOperation : NSOperation<NSURLConnectionDelegate>
 {
     
 }
@@ -35,5 +35,9 @@
 //-(void)imageOperation:(ImageOperation *)operation withAppInfo:(RSSObject *)rss;
 @required
 -(void) plotMapView:(TweetsOperation *)operation withDataArray:(NSArray*) array;
+@required
+-(void) persistTweetsData:(TweetsOperation *)operation;
 
+@required
+-(void)getTweetsFromDB:(TweetsOperation *)operation;
 @end

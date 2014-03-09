@@ -13,6 +13,9 @@
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
 #import "TweetsOperation.h"
+#import "TweetsReachability.h"
+
+#import "PinTweetDAO.h"
 
 
 @interface MapViewController : UIViewController< MKMapViewDelegate, UIPickerViewDataSource,UIPickerViewDelegate,TweetsOperationDelegate>
@@ -27,5 +30,6 @@
 - (IBAction)changeLifeSpan:(id)sender;
 
 @property (nonatomic,strong)NSMutableArray *allTweets;
+@property (nonatomic,strong) PinTweetDAO *dao;
 
 @end

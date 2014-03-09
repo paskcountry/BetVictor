@@ -15,6 +15,11 @@
 		C9130F8718CB36B20074C58D /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9130F8618CB36B20074C58D /* Accounts.framework */; };
 		C9130F8918CB36BA0074C58D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9130F8818CB36BA0074C58D /* CoreLocation.framework */; };
 		C9130F8B18CB36C90074C58D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9130F8A18CB36C90074C58D /* MapKit.framework */; };
+		C9130F8E18CB76D40074C58D /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C9130F8C18CB76D40074C58D /* Model.xcdatamodeld */; };
+		C9130F9118CB77C30074C58D /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C9130F9018CB77C30074C58D /* CoreDataManager.m */; };
+		C9130F9318CB77F10074C58D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9130F9218CB77F10074C58D /* CoreData.framework */; };
+		C9130F9618CB7F780074C58D /* PinTweet.m in Sources */ = {isa = PBXBuildFile; fileRef = C9130F9518CB7F780074C58D /* PinTweet.m */; };
+		C9130F9918CB82A60074C58D /* PinTweetDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = C9130F9818CB82A60074C58D /* PinTweetDAO.m */; };
 		C92C77B718C9E05C00B5378B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C92C77B618C9E05C00B5378B /* Foundation.framework */; };
 		C92C77B918C9E05C00B5378B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C92C77B818C9E05C00B5378B /* CoreGraphics.framework */; };
 		C92C77BB18C9E05C00B5378B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C92C77BA18C9E05C00B5378B /* UIKit.framework */; };
@@ -28,6 +33,7 @@
 		C92C77D818C9E05D00B5378B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C92C77BA18C9E05C00B5378B /* UIKit.framework */; };
 		C92C77E018C9E05D00B5378B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C92C77DE18C9E05D00B5378B /* InfoPlist.strings */; };
 		C92C77E218C9E05D00B5378B /* MapTweetsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C92C77E118C9E05D00B5378B /* MapTweetsTests.m */; };
+		C9960DCD18CC861500F9E5EF /* TweetsReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = C9960DCC18CC861500F9E5EF /* TweetsReachability.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +58,14 @@
 		C9130F8618CB36B20074C58D /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		C9130F8818CB36BA0074C58D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		C9130F8A18CB36C90074C58D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		C9130F8D18CB76D40074C58D /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		C9130F8F18CB77C30074C58D /* CoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreDataManager.h; path = Model/CoreDataManager.h; sourceTree = "<group>"; };
+		C9130F9018CB77C30074C58D /* CoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoreDataManager.m; path = Model/CoreDataManager.m; sourceTree = "<group>"; };
+		C9130F9218CB77F10074C58D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		C9130F9418CB7F780074C58D /* PinTweet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PinTweet.h; path = Model/PinTweet.h; sourceTree = "<group>"; };
+		C9130F9518CB7F780074C58D /* PinTweet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PinTweet.m; path = Model/PinTweet.m; sourceTree = "<group>"; };
+		C9130F9718CB82A60074C58D /* PinTweetDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinTweetDAO.h; sourceTree = "<group>"; };
+		C9130F9818CB82A60074C58D /* PinTweetDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinTweetDAO.m; sourceTree = "<group>"; };
 		C92C77B318C9E05C00B5378B /* MapTweets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapTweets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C92C77B618C9E05C00B5378B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C92C77B818C9E05C00B5378B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -69,6 +83,8 @@
 		C92C77DD18C9E05D00B5378B /* MapTweetsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MapTweetsTests-Info.plist"; sourceTree = "<group>"; };
 		C92C77DF18C9E05D00B5378B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C92C77E118C9E05D00B5378B /* MapTweetsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapTweetsTests.m; sourceTree = "<group>"; };
+		C9960DCB18CC861500F9E5EF /* TweetsReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TweetsReachability.h; path = Helpers/TweetsReachability.h; sourceTree = "<group>"; };
+		C9960DCC18CC861500F9E5EF /* TweetsReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TweetsReachability.m; path = Helpers/TweetsReachability.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9130F9318CB77F10074C58D /* CoreData.framework in Frameworks */,
 				C9130F8B18CB36C90074C58D /* MapKit.framework in Frameworks */,
 				C9130F8918CB36BA0074C58D /* CoreLocation.framework in Frameworks */,
 				C9130F8718CB36B20074C58D /* Accounts.framework in Frameworks */,
@@ -113,6 +130,8 @@
 			children = (
 				C9130F7C18CB2B470074C58D /* TweetsOperation.h */,
 				C9130F7D18CB2B470074C58D /* TweetsOperation.m */,
+				C9960DCB18CC861500F9E5EF /* TweetsReachability.h */,
+				C9960DCC18CC861500F9E5EF /* TweetsReachability.m */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -120,6 +139,11 @@
 		C9130F7718CB2B020074C58D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C9130F9718CB82A60074C58D /* PinTweetDAO.h */,
+				C9130F9818CB82A60074C58D /* PinTweetDAO.m */,
+				C9130F8F18CB77C30074C58D /* CoreDataManager.h */,
+				C9130F9018CB77C30074C58D /* CoreDataManager.m */,
+				C9130F8C18CB76D40074C58D /* Model.xcdatamodeld */,
 				C9130F7818CB2B0B0074C58D /* DTO */,
 			);
 			name = Model;
@@ -130,6 +154,8 @@
 			children = (
 				C9130F7B18CB2B2E0074C58D /* InfoTweet.h */,
 				C9130F7918CB2B210074C58D /* InfoTweet.m */,
+				C9130F9418CB7F780074C58D /* PinTweet.h */,
+				C9130F9518CB7F780074C58D /* PinTweet.m */,
 			);
 			name = DTO;
 			sourceTree = "<group>";
@@ -156,6 +182,7 @@
 		C92C77B518C9E05C00B5378B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C9130F9218CB77F10074C58D /* CoreData.framework */,
 				C9130F8A18CB36C90074C58D /* MapKit.framework */,
 				C9130F8818CB36BA0074C58D /* CoreLocation.framework */,
 				C9130F8618CB36B20074C58D /* Accounts.framework */,
@@ -311,11 +338,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9960DCD18CC861500F9E5EF /* TweetsReachability.m in Sources */,
+				C9130F9618CB7F780074C58D /* PinTweet.m in Sources */,
+				C9130F9918CB82A60074C58D /* PinTweetDAO.m in Sources */,
 				C92C77C718C9E05D00B5378B /* AppDelegate.m in Sources */,
+				C9130F9118CB77C30074C58D /* CoreDataManager.m in Sources */,
 				C9130F7E18CB2B470074C58D /* TweetsOperation.m in Sources */,
 				C9130F8118CB2B6C0074C58D /* MapViewController.m in Sources */,
 				C92C77C318C9E05D00B5378B /* main.m in Sources */,
 				C9130F7A18CB2B210074C58D /* InfoTweet.m in Sources */,
+				C9130F8E18CB76D40074C58D /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -538,6 +570,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C9130F8C18CB76D40074C58D /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C9130F8D18CB76D40074C58D /* Model.xcdatamodel */,
+			);
+			currentVersion = C9130F8D18CB76D40074C58D /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = C92C77AB18C9E05C00B5378B /* Project object */;
 }

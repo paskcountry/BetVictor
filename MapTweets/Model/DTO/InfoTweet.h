@@ -26,8 +26,8 @@
 @property (nonatomic,assign) int number;
 @property (nonatomic,assign) BOOL timeToDie;
 @property (nonatomic,retain) NSString *userName;
-@property (nonatomic,retain) NSString *title;
-@property (nonatomic,retain) NSString *subtitle;
+@property (nonatomic,copy) NSString *title;
+@property (nonatomic,copy) NSString *subtitle;
 @property (nonatomic,retain) NSDate *annotationCreated;
 
 -(id)initWithCoordinate:(CLLocationCoordinate2D) c

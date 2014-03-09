@@ -31,6 +31,8 @@
 
 @synthesize timer;
 
+@synthesize dao;
+
 int numberTweet;
 int tweetLife;
 bool resetTweetLife;
@@ -43,7 +45,7 @@ bool resetTweetLife;
     //By default I have set timer to 20 seconds.
     tweetLife = 20;
   
-    timer =[NSTimer scheduledTimerWithTimeInterval:tweetLife target:self selector:@selector(trigger:) userInfo:nil repeats:YES];
+ 
     
     numberTweet=0;
     
@@ -51,7 +53,23 @@ bool resetTweetLife;
     
     self.mapView.delegate = self;
 
-    [self launchTweetRequest];
+    
+    TweetsReachability *tR = [[TweetsReachability alloc]init];
+    
+    bool isConnection = [tR isInternetReachable];
+    
+    //if connection avaiable launch the request
+    
+    if (isConnection)
+       [self launchTweetRequest];
+    
+    // else get data from last connection
+    else
+     [self getTweetsFromDataBase];
+    
+    
+    timer =[NSTimer scheduledTimerWithTimeInterval:tweetLife target:self selector:@selector(trigger:) userInfo:nil repeats:YES];
+    
     
 
 }
@@ -86,6 +104,53 @@ bool resetTweetLife;
 -(void)mapView:(MKMapView *)mapView didDeselectAnnotationView:(MKAnnotationView *)view
 {
     
+}
+
+
+-(void)getTweetsFromDB:(TweetsOperation *)operation
+{
+    
+    [self getTweetsFromDataBase];
+}
+-(void)getTweetsFromDataBase
+{
+    
+        if (dao ==nil)
+            dao = [[PinTweetDAO alloc]init];
+    
+          allTweets = [[NSMutableArray alloc]initWithArray:[dao lastPinsCollection]];
+         // allTweets = [dao lastPinsCollection];
+    
+          for (InfoTweet * info in allTweets)
+          {
+              [mapView addAnnotation:info];
+          }
+    
+}
+
+-(void)persistTweetsData:(TweetsOperation *)operation
+{
+    if ([allTweets count]>0)
+    {
+        if (dao ==nil)
+            dao = [[PinTweetDAO alloc]init];
+   
+        bool result = [dao insertPinsCollection:allTweets lifeTime:[NSNumber numberWithInt:tweetLife]];
+    
+  
+        if (result)
+        {
+       
+            NSLog(@"Data persisted correctly");
+        }
+    
+        else
+        {
+            NSLog(@"Error persisting data");
+        
+        }
+    }
+
 }
 -(void)plotMapView:(TweetsOperation *)operation withDataArray:(NSArray *)array
 {
@@ -180,7 +245,10 @@ bool resetTweetLife;
 
 -(void)checkTimeToDie
 {
+    if (dao == nil)
+        dao = [[PinTweetDAO alloc]init];
     
+    //Formatt for compare the dates
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"YYYY-MM-dd hh:mm:ss"];
     
@@ -192,26 +260,39 @@ bool resetTweetLife;
 
   
     
-    // it will give you current date
+    
     for (InfoTweet *tweet in allTweets)
     {
-          NSDate *now = [NSDate date];
+        NSDate *now = [NSDate date];
+        
         NSLog(@"before add interval creation date is %@",[formatter stringFromDate:tweet.annotationCreated]);
+        
         NSDate *newDate = [tweet.annotationCreated dateByAddingTimeInterval:tweetLife]; // annotation creation date + lifespan
+        
         NSLog(@"after add interval creation date is %@",[formatter stringFromDate:tweet.annotationCreated]);
            NSLog(@"new  date is %@",[formatter stringFromDate:newDate]);
+        
         NSComparisonResult result;
+        
+        
         //has three possible values: NSOrderedSame,NSOrderedDescending, NSOrderedAscending
         
-        result = [now compare:newDate]; // comparing two dates
+        result = [newDate compare:now]; // comparing two dates
         
         if(result==NSOrderedAscending)
         {
             NSLog(@"expiration time has come ..Remove annotation");
             NSLog(@"creation date is %@",[formatter stringFromDate:tweet.annotationCreated]);
+            
+            
             tweet.timeToDie=YES;
+            //We just can delete here aswell from memory..but we will do at the end iterating the array wipeItems
             [wipeItems addObject:tweet];
             
+            //Delete Pins from Core Data
+            [dao deletePinTweets:tweet.annotationCreated];
+            
+            [mapView removeAnnotation:tweet];
             
         }
         else if(result==NSOrderedDescending)
@@ -223,17 +304,23 @@ bool resetTweetLife;
         {
             NSLog(@"your time has just come");
             NSLog(@"creation date is %@",[formatter stringFromDate:tweet.annotationCreated]);
-             tweet.timeToDie=YES;
+            tweet.timeToDie=YES;
+            
+            //We just can delete here aswell from memory..but we will do at the end iterating the array wipeItems
             [wipeItems addObject:tweet];
+            [mapView removeAnnotation:tweet];
+
+            //Delete from CoreData
+            [dao deletePinTweets:tweet.annotationCreated];
            
             
         }
     }
     
-
+    //remove from memory
     [allTweets removeObjectsInArray:wipeItems];
     
-    [mapView removeAnnotations:wipeItems];
+   // [mapView removeAnnotations:wipeItems];
  
     annotationsNumber = (int)[[mapView annotations]count];
     

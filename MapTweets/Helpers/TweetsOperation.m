@@ -44,6 +44,7 @@ int numberTweet;
 
 -(void)getSecureTweets{
     
+    //rquest in twitter stream api who has text containing I
     [self startStreamingWithKeyword:@"I"];
     
 }
@@ -131,12 +132,23 @@ int numberTweet;
     
     [[ self delegate] plotMapView:self withDataArray:array];
     //DO WE HAVE TO PERSIS DATA??
-    
+     [[ self delegate] persistTweetsData:self ];
 }
 
 -(void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
+    //persist the data
     NSLog(@"CONNECTION DID FINISH");
+    
+    
+}
+
+-(void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
+{
+    
+      NSLog(@"CONNECTION DID FAIL with Error %@", error.description);
+    [[ self delegate] getTweetsFromDB:self];
+    
 }
 
 @end
